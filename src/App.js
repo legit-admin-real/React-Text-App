@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Aboutus from "./components/Aboutus";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import Aboutus from "./components/Aboutus";
 import Navbar from "./components/Navbar";
 import Textarea from "./components/Textarea";
 import Alerts from "./components/Alerts";
@@ -31,17 +31,18 @@ function App() {
   };
   return (
     <>
-      <BrowserRouter>
+     
         <Navbar title="Text Editor v2.0" mode={mode} toggle={toggleMode} />
         <Alerts alert={alert} />
-        <Routes>
+        <Textarea mode={mode} alert={showAlert} />
+        {/*  <BrowserRouter><Routes>
           <Route
             path="/"
-            element={<Textarea mode={mode} alert={showAlert} />}
+            element={}
           ></Route>
           <Route path="/about" element={<Aboutus />}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }
