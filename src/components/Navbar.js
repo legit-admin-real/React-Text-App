@@ -24,12 +24,12 @@ function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-a active" aria-current="page" href="/#">Home  </a>
+              {/* <li className="nav-item">
+                <a className="nav-a active" aria-current="page" href={ ()=> false}>Home  </a>
               </li> 
               <li className="nav-item">
-                <a className="nav-a" href="/#">About Us</a>
-              </li>
+                <a className="nav-a" href={ ()=> false}>About Us</a>
+              </li> */}
               </ul>
             <div
               className={`form-check form-switch form-light text-${
