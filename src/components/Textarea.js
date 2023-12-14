@@ -53,21 +53,21 @@ function Textarea(props) {
             onClick={clearText2}
             style={{ backgroundColor: props.mode === 'dark' ? '#282b30' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }}
           ></textarea>
-          <button className=" btn btn-primary my-2" onClick={doUpper}>
+          <button disabled={title.length===0} className=" btn btn-primary my-2" onClick={doUpper}>
             Upper case
           </button>
-          <button className=" btn btn-primary my-2 mx-2" onClick={doLower}>
+          <button disabled={title.length===0} className=" btn btn-primary my-2 mx-2" onClick={doLower}>
             Lower case
           </button>
-          <button className=" btn btn-info my-2 mx-1" onClick={() => { navigator.clipboard.writeText(title); changeCopy(); }}>
+          <button disabled={title.length===0} className=" btn btn-info my-2 mx-1" onClick={() => { navigator.clipboard.writeText(title); changeCopy(); }}>
             {buttonText}
           </button>
-          <button className=" btn btn-danger my-2 mx-1" onClick={clearText}>
+          <button disabled={title.length===0} className=" btn btn-danger my-2 mx-1" onClick={clearText}>
             Clear
           </button>
           <h4 className="my-2">Info</h4>
           <p>
-            You document has <b>{title.split(" ").length}</b> words and <b>{title.length}{" "}</b>
+            You document has <b>{title.split(" ").filter((element)=>{return element.length!==0}).length}</b> words and <b>{title.length}{" "}</b>
             characters. 💌
           </p>
           <p style={{ fontFamily: "monospace", fontWeight: "bold", fontSize: "18px" }} className="my-1">
