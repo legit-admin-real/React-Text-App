@@ -6,5 +6,5 @@
 npm install
 npm start
 ```
-### Demo of this project
-https://legit-admin-real.github.io/React-Text-App
+### Demo of this project [here.](https://legit-admin-real.github.io/React-Text-App)
+
